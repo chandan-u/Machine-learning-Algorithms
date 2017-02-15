@@ -1,0 +1,35 @@
+
+
+## Looking at the figure of the linear classification: We can visualize two dimensional and three dimensional datapoints  easily . Either on paper or computer! But how do we visualize beyond three dimensional. Are there any techniques ( such as projecting a multidimensional to two or three dimensional). Or is it that , beyond three dimensional everything can be only shown as a mathamatical form?
+
+
+I guess beyond two/three dimensional it is generally not possible to draw visualizations . The best we can do is represent things in a mathamatical form. A general framework which addresses your problem is called dimensionality reduction. You would like to project data from N dimensions to 2 dimensions, while preserving the "essential information" in your data. The most suitable method depends on the distribution of your data, i.e. the N-dimensional manifold. PCA will fit a plane using least squares criterion 
+(http://stats.stackexchange.com/questions/63589/how-to-project-high-dimensional-space-into-a-two-dimensional-plane)
+
+
+
+
+## In neural networks is it possible to know which features are the nodes in the hiden layers learning? In logistic regresison we have one wieght assigned to each input feature value. But in the case of the neural network is it possbile to learn what features are the hiddine layers picking up?
+
+
+In neural networks each node in the hidden layer  picks/ learns feature on its own. Each node learns its own features.  I am not sure weather we can see what the hidden layers are learning. In convolution neural networks we can probably see what the hidden layers have learned by seeing the output of convolution layers. But in other cases or networks I am not sure.
+
+
+## It just occured to me when learning about different representation models: Lets assume that the half of the data points has linear features and half of it is non-linear. In such a case how do we build a model?
+
+
+If we have a way to realize and seperate the non-linear features we can probably seperate these features and build seperate models for both of them. If it's hard to seperate we have to build ensemble models I guess.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

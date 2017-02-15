@@ -1,0 +1,46 @@
+Algorithm 1: Batch Gradient Descent(Err;X; y)
+1: // A non-optimized, basic implementation of batch gradient descent
+ w   random vector in Rd
+3: err 1
+4: tolerance   10e􀀀4
+5: while jErr(w) 􀀀 errj > tolerance do
+6: err   Err(w)
+7: g   rErr(w) . for linear regression, rErr(w) = 1
+nX>(Xw 􀀀 y)
+8: // The step-size  could be chosen by line-search
+9:    line search(w; g; Err)
+10: w   w 􀀀 g
+11: return w
+
+
+
+#w   random vector in Rd
+self.weights = np.dot(np.dot(np.linalg.pinv(np.add(np.dot(Xtrain.T,Xtrain)/numsamples,self.params['regwgt']*np.identity(Xtrain.shape[1]))), Xtrain.T),yt)/numsamples
+
+
+
+def probabilityOfOne(weights, Xtrain):
+
+    return 1/( 1 + np.exp(np.dot(weights.T, Xtrain)))
+
+
+def learn(self, Xtrain, ytrain):
+        """ Learns using the traindata """
+        # Dividing by numsamples before adding ridge regularization
+        # to make the regularization parameter not dependent on numsamples
+
+        # Initial random weights ( Better if initialized using linear regression optimal wieghts)
+        self.weights =  np.dot(np.dot(np.linalg.pinv(np.dot(Xless.T,Xless)), Xless.T),ytrain)
+        
+
+        numsamples = Xtrain.shape[0]
+        Xless = Xtrain[:,self.params['features']]
+        numofEpochs = 10
+        for epoch in range(numofEpochs):
+            p = numpy.random.permutation(numsamples)
+            for i in range(Xtrain.shape[0]):
+                #error =  np.dot(Xtrain,self.weights) - ytrain
+
+                pone = probabilityOfOne(self.weights, Xtrain[p])
+                # update weights
+                self.weights = self.weights - Xtrain * pone

@@ -1,0 +1,65 @@
+
+
+1.) Let us assume that the complexity of a model is increased . Also the data has increased. But the model when tested on testing data, it's performance is only slightly decreased. Can we still consider this as overfitting?
+
+
+    
+    Lets Say: We have training data as train and test data asa test
+
+    We train our data on train+dev and validate it for dev data as well as test data
+
+              Test
+          ------------
+ Model 1       75
+
+ Model 2       74 
+
+
+ Model 3       73
+
+
+ Model 4       74
+
+
+ The complexity of model is increasing from model1 to model4 (so is the data). Can we still think the model is overfitting , because the performanec on test is being reduced from 75 to 73. ( It's only a slight variation. Maybe the performance can increase after model4?)
+
+
+
+
+
+
+2. How are neural networks different from the linear models?
+
+
+sol: Single layer perceptrons do act as linear models. 
+
+     But multilayer feed forward is not the same. It has the ability to capture underlying features (that can be missed while modelling using linear regression)
+
+
+     Neural networks have the ability to capture features in the data without considering them. In linear model we consider priorly that there are so and so variables that are linearly dependent with the target. But in neural networks we always try to increase the layers and decrease the layers, increase/decrease number of nodes in a layer, hoping that it would capture most of the features. 
+
+
+
+3. Is machine learning feasable for situations where we have less amount of data? How do we approach these problems i.e when we have less amount of data? 
+
+
+sol:   From my understanding , maybe(a big one) when we have less  data:  statistical/analytical approach is used for building models. 
+       But when we have more data/ enough we approach with machine learning models.
+
+       One more way to approach such situtations( where we dont have enough data is ) to use data augmentation.
+       We try to modify the available data and generate even more data points, to train a model. 
+
+
+       I have similar situation while modeling emotions:  I have collected data for anger and data for happy. But data for anger seems to be less compared to happy. So i could'nt obviously build a single model based on this available data (Then it will get biased). Similarly I couldnt scale down the data points for happy , in which case I will lose informaton. So I was thniking of building two seperate models for happy and anger. 
+
+       But what about situations in which we cannot augmenting data ( even after augmentation your data is not sufficiently large) will not help, and the given data is not biased. How do we handle such a scenario ?
+
+
+
+
+
+
+
+
+
+

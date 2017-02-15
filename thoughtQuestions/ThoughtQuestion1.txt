@@ -1,0 +1,32 @@
+
+
+1. Given a data set how do you calculate the prior probabilities : Do you assume it or do you compute it from the data set?
+
+
+   I have considered a scenario of cricket match : India vs Australia
+   Its a three match series. So The firt two matches were won by India.
+   What is the prior probabilities of india winning the third match?
+
+   Let P(A) = prior probability of india winning the match
+       P(B) = prior probability of Australia winning the match
+
+
+       So in this case prior probabaility can be assumed as 1/2 or it can be derived from the dataset (previous data of two matches)
+
+
+       Here is what I have understood: If the data set is Independent and identically distributed  (i.i.d) , the outcome of the third match is independent of the last two  matches and the probabilties will be equally likely. So if it's an i.i.d data set then prior probability is simply 1/2 in this case ( assumed )
+
+       If the data is not i.i.d then we have to compute the prior probabilies based on the previous outcomes.
+
+
+
+
+2. In machine learning when we are trying to build models: If we have to choose a hypothesis set  H  among { Linear Equations , Quadratic equations etc   } or any other function that we would use to try fit the data, How do we choose the best function or hypothesis; Is there an approach or framework for this ?
+
+    My guess we would do an exploratory analysis of data and see how data is spread in the euclidian space; Based on which we choose an equation that would fit the data ( based on our intution). But I am skeptical analysis
+
+
+3. In chapter three , In order to minimize the cost( ÿ, y)  (prediction) we first apply argmin and then we change the equation to argmax; why do we do this?
+
+
+    
